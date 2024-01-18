@@ -52,9 +52,10 @@ class BaseModel:
         else:
             result_dict["created_at"] = self.created_at.isoformat()
 
-        if (type(self.created_at) == str):
+        if (type(self.updated_at) == str):
             result_dict["updated_at"] = self.updated_at
         else:
             result_dict["updated_at"] = self.updated_at.isoformat()
-        result_dict["__class__"] = self.__class__.__name__
+            
+        result_dict.pop("__class__", None)
         return result_dict
