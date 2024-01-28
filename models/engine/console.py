@@ -6,6 +6,9 @@ import cmd
 
 
 class HBNBCommand(cmd.Cmd):
+    """
+    Interpreters command class
+    """
     prompt = '(hbnb) '
 
     # ------------  Commands    -----------
